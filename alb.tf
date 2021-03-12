@@ -1,3 +1,11 @@
+resource "aws_lb" "main" {
+  load_balancer_type = "application"
+  name               = "go-web"
+
+  security_groups = [aws_security_group.alb.id]
+  subnets         = [aws_subnet.public_1a.id, aws_subnet.public_1c.id, aws_subnet.public_1d.id]
+}
+
 resource "aws_lb_target_group" "main" {
   name = "go-web"
 

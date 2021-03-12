@@ -29,8 +29,8 @@ terraform apply実行後、ALBのDNSにアクセスするとHello Worldが表示
 
 ```
 cd golang
-docker build ./ -t golang_http_test
-docker run -p 8080:8080 golang_http_test
+docker build ./ -t go_web
+docker run -p 80:80 go_web
 ```
 
-ブラウザでlocalhost:8080にアクセスするとHello Worldが表示されます
+ブラウザでlocalhost:80にアクセスするとHello Worldが表示されます
